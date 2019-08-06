@@ -31,8 +31,22 @@
     "path": "@PROJECT_PATH@",
     "versionFirst": "4.10.5",
     "siteFonts": [],
-    "uniqCompNum": 1,
-    "versionPublish": "4.10.5"
+    "uniqCompNum": 3,
+    "versionPublish": "4.10.7",
+    "screenshot": "screenshot.png",
+    "PWA": {
+      "enabled": true,
+      "name": "KolegaTrade",
+      "icon": "@PROJECT_PATH@/assets/images/snap-screen-20190211201007-512x512.png",
+      "themeColor": "#8de734"
+    },
+    "siteUrl": "http://kolegatrade.com",
+    "sitemapSwitcherAuto": "on",
+    "favicon": "",
+    "noImageResize": "",
+    "sitemapSwitcher": "on",
+    "google-analytics": "",
+    "pwa-switcher": "on"
   },
   "pages": {
     "index.html": {
@@ -290,6 +304,7 @@
           "_name": "slider1",
           "_customHTML": "<section class=\"carousel slide\" group=\"Sliders & Gallery\" plugins=\"YTPlayer,VimeoPlayer,SliderVideo,BootstrapCarouselSwipe\" data-interval=\"false\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"carousel\" title=\"Slides\" name=\"slides\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div mbr-carousel=\"slides\" class=\"full-screen\" mbr-carousel-embedded></div>\n\n</section>",
           "_cid": "ruDnSKx3zG",
+          "_anchor": "slider1-0",
           "_protectedParams": [
             "slides__autoplay",
             "slides__autoplayInterval",
@@ -355,8 +370,53 @@
                 "buttons": "<a data-app-btn=\"true\" class=\"btn btn-info\" data-app-placeholder=\"Type Text\" href=\"https://mobirise.com\">FOR WINDOWS</a> <a data-app-btn=\"true\" class=\"btn  btn-white-outline\" data-app-placeholder=\"Type Text\" href=\"https://mobirise.com\">FOR MAC</a>"
               }
             ]
+          }
+        }
+      ]
+    },
+    "page1.html": {
+      "settings": {
+        "meta_descr": "Web Site Generator Description",
+        "title": "3D Sayfa",
+        "order": 1
+      },
+      "components": [
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 15px)",
+              "padding-bottom": "(@paddingBottom * 15px)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            }
           },
-          "_anchor": "slider1-0"
+          "_name": "header1",
+          "_customHTML": "<section class=\"header1\" group=\"Headers\" data-bg-video=\"{{bg.type == 'video' &amp;&amp; bg.value.url}}\" mbr-class=\"{'mbr-fullscreen': fullScreen,\n                    'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n        <input type=\"range\" inline=\"\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline=\"\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked=\"\">\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubTitle\" checked=\"\">\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked=\"\">\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\" checked=\"\">\n\n        <fieldset type=\"background\" name=\"bg\" parallax=\"\">\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background4.jpg\" parallax=\"\" selected=\"\">\n            <input type=\"color\" title=\"Background Color\" value=\"#7f1933\">\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=36YgDDJ7XSc\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked=\"\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#149dcc\" condition=\"overlay &amp;&amp; bg.type !== 'color'\">\n        <input type=\"range\" inline=\"\" title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.6\" condition=\"overlay &amp;&amp; bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay &amp;&amp; bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n\n    <div class=\"container\">\n        <div class=\"row justify-content-md-center\">\n            <div class=\"mbr-white col-md-10\">\n                <h1 class=\"mbr-section-title align-center mbr-bold pb-3 mbr-fonts-style\" mbr-theme-style=\"display-1\" mbr-if=\"showTitle\">\n                    FULL WIDTH INTRO\n                </h1>\n                <h3 class=\"mbr-section-subtitle align-center mbr-light pb-3 mbr-fonts-style\" mbr-theme-style=\"display-2\" mbr-if=\"showSubTitle\">\n                    Beautiful mobile websites\n                </h3>\n                <p class=\"mbr-text align-center pb-3 mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">\n                    Full width intro with adjustable height, background image and a color overlay. Click any text to edit or style it.\n                </p>\n                <div class=\"mbr-section-btn align-center\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\" mbr-buttons=\"\" mbr-theme-style=\"display-4\"><a class=\"btn btn-md btn-secondary\" href=\"https://mobirise.co\" data-app-placeholder=\"Type Text\">\n                        <span class=\"mbr-iconfont mbri-file\"></span>LEARN MORE</a></div>\n            </div>\n        </div>\n    </div>\n\n</section>",
+          "_cid": "rvsAex9t77",
+          "_anchor": "header1-2",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "_customTemplate": true,
+          "_afterNavbarItem": false,
+          "_customHTML": "<!-- Type valid HTML here -->\n\n\n<div class=\"grid-container\">\n  \n    <div class=\"grid-item\">\n    <div class=\"sketchfab-embed-wrapper\"><iframe width=\"640\" height=\"480\" src=\"https://sketchfab.com/models/a2f58d2b13924809b12e8dd163cdaa02/embed\" frameborder=\"0\" allow=\"autoplay; fullscreen; vr\" mozallowfullscreen=\"true\" webkitallowfullscreen=\"true\"></iframe>\n\n<p style=\"font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;\">\n    <a href=\"https://sketchfab.com/3d-models/hellom-a2f58d2b13924809b12e8dd163cdaa02?utm_medium=embed&amp;utm_source=website&amp;utm_campaign=share-popup\" target=\"_blank\" style=\"font-weight: bold; color: #1CAAD9;\">Hellom</a>\n    by <a href=\"https://sketchfab.com/wslee?utm_medium=embed&amp;utm_source=website&amp;utm_campaign=share-popup\" target=\"_blank\" style=\"font-weight: bold; color: #1CAAD9;\">wslee</a>\n    on <a href=\"https://sketchfab.com?utm_medium=embed&amp;utm_source=website&amp;utm_campaign=share-popup\" target=\"_blank\" style=\"font-weight: bold; color: #1CAAD9;\">Sketchfab</a>\n</p>\n</div>\n    </div>\n    \n <div class=\"grid-container\">\n  \n    <div class=\"grid-item\">\n    <div class=\"sketchfab-embed-wrapper\"><iframe width=\"640\" height=\"480\" src=\"https://sketchfab.com/models/a2f58d2b13924809b12e8dd163cdaa02/embed\" frameborder=\"0\" allow=\"autoplay; fullscreen; vr\" mozallowfullscreen=\"true\" webkitallowfullscreen=\"true\"></iframe>\n\n<p style=\"font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;\">\n    <a href=\"https://sketchfab.com/3d-models/hellom-a2f58d2b13924809b12e8dd163cdaa02?utm_medium=embed&amp;utm_source=website&amp;utm_campaign=share-popup\" target=\"_blank\" style=\"font-weight: bold; color: #1CAAD9;\">Hellom</a>\n    by <a href=\"https://sketchfab.com/wslee?utm_medium=embed&amp;utm_source=website&amp;utm_campaign=share-popup\" target=\"_blank\" style=\"font-weight: bold; color: #1CAAD9;\">wslee</a>\n    on <a href=\"https://sketchfab.com?utm_medium=embed&amp;utm_source=website&amp;utm_campaign=share-popup\" target=\"_blank\" style=\"font-weight: bold; color: #1CAAD9;\">Sketchfab</a>\n</p>\n</div>\n    </div>\n    \n     <div class=\"grid-container\">\n  \n    <div class=\"grid-item\">\n    <div class=\"sketchfab-embed-wrapper\"><iframe width=\"640\" height=\"480\" src=\"https://sketchfab.com/models/a2f58d2b13924809b12e8dd163cdaa02/embed\" frameborder=\"0\" allow=\"autoplay; fullscreen; vr\" mozallowfullscreen=\"true\" webkitallowfullscreen=\"true\"></iframe>\n\n<p style=\"font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;\">\n    <a href=\"https://sketchfab.com/3d-models/hellom-a2f58d2b13924809b12e8dd163cdaa02?utm_medium=embed&amp;utm_source=website&amp;utm_campaign=share-popup\" target=\"_blank\" style=\"font-weight: bold; color: #1CAAD9;\">Hellom</a>\n    by <a href=\"https://sketchfab.com/wslee?utm_medium=embed&amp;utm_source=website&amp;utm_campaign=share-popup\" target=\"_blank\" style=\"font-weight: bold; color: #1CAAD9;\">wslee</a>\n    on <a href=\"https://sketchfab.com?utm_medium=embed&amp;utm_source=website&amp;utm_campaign=share-popup\" target=\"_blank\" style=\"font-weight: bold; color: #1CAAD9;\">Sketchfab</a>\n</p>\n</div>\n    </div>\n    \n         <div class=\"grid-container\">\n  \n    <div class=\"grid-item\">\n    <div class=\"sketchfab-embed-wrapper\"><iframe width=\"640\" height=\"480\" src=\"https://sketchfab.com/models/a2f58d2b13924809b12e8dd163cdaa02/embed\" frameborder=\"0\" allow=\"autoplay; fullscreen; vr\" mozallowfullscreen=\"true\" webkitallowfullscreen=\"true\"></iframe>\n\n<p style=\"font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;\">\n    <a href=\"https://sketchfab.com/3d-models/hellom-a2f58d2b13924809b12e8dd163cdaa02?utm_medium=embed&amp;utm_source=website&amp;utm_campaign=share-popup\" target=\"_blank\" style=\"font-weight: bold; color: #1CAAD9;\">Hellom</a>\n    by <a href=\"https://sketchfab.com/wslee?utm_medium=embed&amp;utm_source=website&amp;utm_campaign=share-popup\" target=\"_blank\" style=\"font-weight: bold; color: #1CAAD9;\">wslee</a>\n    on <a href=\"https://sketchfab.com?utm_medium=embed&amp;utm_source=website&amp;utm_campaign=share-popup\" target=\"_blank\" style=\"font-weight: bold; color: #1CAAD9;\">Sketchfab</a>\n</p>\n</div>\n    </div>\n    \n             <div class=\"grid-container\">\n  \n    <div class=\"grid-item\">\n    <div class=\"sketchfab-embed-wrapper\"><iframe width=\"640\" height=\"480\" src=\"https://sketchfab.com/models/a2f58d2b13924809b12e8dd163cdaa02/embed\" frameborder=\"0\" allow=\"autoplay; fullscreen; vr\" mozallowfullscreen=\"true\" webkitallowfullscreen=\"true\"></iframe>\n\n<p style=\"font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;\">\n    <a href=\"https://sketchfab.com/3d-models/hellom-a2f58d2b13924809b12e8dd163cdaa02?utm_medium=embed&amp;utm_source=website&amp;utm_campaign=share-popup\" target=\"_blank\" style=\"font-weight: bold; color: #1CAAD9;\">Hellom</a>\n    by <a href=\"https://sketchfab.com/wslee?utm_medium=embed&amp;utm_source=website&amp;utm_campaign=share-popup\" target=\"_blank\" style=\"font-weight: bold; color: #1CAAD9;\">wslee</a>\n    on <a href=\"https://sketchfab.com?utm_medium=embed&amp;utm_source=website&amp;utm_campaign=share-popup\" target=\"_blank\" style=\"font-weight: bold; color: #1CAAD9;\">Sketchfab</a>\n</p>\n</div>\n    </div>\n    \n                 <div class=\"grid-container\">\n  \n    <div class=\"grid-item\">\n    <div class=\"sketchfab-embed-wrapper\"><iframe width=\"640\" height=\"480\" src=\"https://sketchfab.com/models/a2f58d2b13924809b12e8dd163cdaa02/embed\" frameborder=\"0\" allow=\"autoplay; fullscreen; vr\" mozallowfullscreen=\"true\" webkitallowfullscreen=\"true\"></iframe>\n\n<p style=\"font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;\">\n    <a href=\"https://sketchfab.com/3d-models/hellom-a2f58d2b13924809b12e8dd163cdaa02?utm_medium=embed&amp;utm_source=website&amp;utm_campaign=share-popup\" target=\"_blank\" style=\"font-weight: bold; color: #1CAAD9;\">Hellom</a>\n    by <a href=\"https://sketchfab.com/wslee?utm_medium=embed&amp;utm_source=website&amp;utm_campaign=share-popup\" target=\"_blank\" style=\"font-weight: bold; color: #1CAAD9;\">wslee</a>\n    on <a href=\"https://sketchfab.com?utm_medium=embed&amp;utm_source=website&amp;utm_campaign=share-popup\" target=\"_blank\" style=\"font-weight: bold; color: #1CAAD9;\">Sketchfab</a>\n</p>\n</div>\n    </div>\n    \n                     <div class=\"grid-container\">\n  \n    <div class=\"grid-item\">\n    <div class=\"sketchfab-embed-wrapper\"><iframe width=\"640\" height=\"480\" src=\"https://sketchfab.com/models/a2f58d2b13924809b12e8dd163cdaa02/embed\" frameborder=\"0\" allow=\"autoplay; fullscreen; vr\" mozallowfullscreen=\"true\" webkitallowfullscreen=\"true\"></iframe>\n\n<p style=\"font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;\">\n    <a href=\"https://sketchfab.com/3d-models/hellom-a2f58d2b13924809b12e8dd163cdaa02?utm_medium=embed&amp;utm_source=website&amp;utm_campaign=share-popup\" target=\"_blank\" style=\"font-weight: bold; color: #1CAAD9;\">Hellom</a>\n    by <a href=\"https://sketchfab.com/wslee?utm_medium=embed&amp;utm_source=website&amp;utm_campaign=share-popup\" target=\"_blank\" style=\"font-weight: bold; color: #1CAAD9;\">wslee</a>\n    on <a href=\"https://sketchfab.com?utm_medium=embed&amp;utm_source=website&amp;utm_campaign=share-popup\" target=\"_blank\" style=\"font-weight: bold; color: #1CAAD9;\">Sketchfab</a>\n</p>\n</div>\n    </div>\n    \n                         <div class=\"grid-container\">\n  \n    <div class=\"grid-item\">\n    <div class=\"sketchfab-embed-wrapper\"><iframe width=\"640\" height=\"480\" src=\"https://sketchfab.com/models/a2f58d2b13924809b12e8dd163cdaa02/embed\" frameborder=\"0\" allow=\"autoplay; fullscreen; vr\" mozallowfullscreen=\"true\" webkitallowfullscreen=\"true\"></iframe>\n\n<p style=\"font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;\">\n    <a href=\"https://sketchfab.com/3d-models/hellom-a2f58d2b13924809b12e8dd163cdaa02?utm_medium=embed&amp;utm_source=website&amp;utm_campaign=share-popup\" target=\"_blank\" style=\"font-weight: bold; color: #1CAAD9;\">Hellom</a>\n    by <a href=\"https://sketchfab.com/wslee?utm_medium=embed&amp;utm_source=website&amp;utm_campaign=share-popup\" target=\"_blank\" style=\"font-weight: bold; color: #1CAAD9;\">wslee</a>\n    on <a href=\"https://sketchfab.com?utm_medium=embed&amp;utm_source=website&amp;utm_campaign=share-popup\" target=\"_blank\" style=\"font-weight: bold; color: #1CAAD9;\">Sketchfab</a>\n</p>\n</div>\n    </div>\n    \n                             <div class=\"grid-container\">\n  \n    <div class=\"grid-item\">\n    <div class=\"sketchfab-embed-wrapper\"><iframe width=\"640\" height=\"480\" src=\"https://sketchfab.com/models/a2f58d2b13924809b12e8dd163cdaa02/embed\" frameborder=\"0\" allow=\"autoplay; fullscreen; vr\" mozallowfullscreen=\"true\" webkitallowfullscreen=\"true\"></iframe>\n\n<p style=\"font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;\">\n    <a href=\"https://sketchfab.com/3d-models/hellom-a2f58d2b13924809b12e8dd163cdaa02?utm_medium=embed&amp;utm_source=website&amp;utm_campaign=share-popup\" target=\"_blank\" style=\"font-weight: bold; color: #1CAAD9;\">Hellom</a>\n    by <a href=\"https://sketchfab.com/wslee?utm_medium=embed&amp;utm_source=website&amp;utm_campaign=share-popup\" target=\"_blank\" style=\"font-weight: bold; color: #1CAAD9;\">wslee</a>\n    on <a href=\"https://sketchfab.com?utm_medium=embed&amp;utm_source=website&amp;utm_campaign=share-popup\" target=\"_blank\" style=\"font-weight: bold; color: #1CAAD9;\">Sketchfab</a>\n</p>\n</div>\n    </div>\n    \n    \n</div>\n</div></div></div></div></div></div></div></div>",
+          "_customCSS": "/* Type valid CSS here */\n\n\n.grid-container {\n  display: grid;\n  grid-template-columns: auto auto auto;\n  background-color: #2196F3;\n  padding: 10px;\n}\n.grid-item {\n  background-color: rgba(255, 255, 255, 0.8);\n  border: 1px solid rgba(0, 0, 0, 0.8);\n  padding: 20px;\n  font-size: 30px;\n  text-align: center;\n}",
+          "alias": "code-editor",
+          "_tags": [
+            "Extension"
+          ],
+          "_name": "pro.custom-html",
+          "_anchor": "custom-html-1",
+          "_PHPplaceholders": [],
+          "_JSplaceholders": []
         }
       ]
     }
